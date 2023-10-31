@@ -1,14 +1,13 @@
 class Solution {
     public int maximumScore(int[] nums, int k) {
-        int n=nums.length;
         int i=k,j=k;
         int curMin=nums[k];
         int result=nums[k];
         
-        while(i>0 || j<(n-1))
+        while(i>0 || j<(nums.length-1))
         {
             int leftValue = (i > 0) ? nums[i - 1] : 0;
-            int rightValue = (j < n - 1) ? nums[j + 1] : 0;
+            int rightValue = (j < nums.length - 1) ? nums[j + 1] : 0;
 
              if (leftValue < rightValue) {
                 j++;
