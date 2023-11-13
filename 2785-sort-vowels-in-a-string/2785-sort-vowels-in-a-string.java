@@ -1,9 +1,10 @@
 class Solution {
     public String sortVowels(String s) {
+        int n=s.length();
         char[] charArray=s.toCharArray();
-        String[] vowel=new String[s.length()];
+        String[] vowel=new String[n];
         int k=0;
-        for(int i=0;i<s.length();i++) {
+        for(int i=0;i<n;i++) {
             if (isVowel(charArray[i])) {
                 vowel[k++] =String.valueOf(charArray[i]);
             }
