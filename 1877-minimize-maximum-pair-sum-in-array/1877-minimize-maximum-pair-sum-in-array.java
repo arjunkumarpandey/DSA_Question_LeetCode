@@ -4,10 +4,10 @@ class Solution {
      Arrays.sort(nums);
      int j=nums.length-1;
      int i=0;
-     while(i<j){
+     for(i=0;i<j;i++){
         int res=nums[i]+nums[j];
         sum=Math.max(res,sum);
-        i++;
+        //i++;
         j--;
      }
     
