@@ -14,10 +14,12 @@ class Solution {
         
         return res;
     }
-    int rev(int r){
-        String str=Integer.toString(r);
-        StringBuilder reversedStr=new StringBuilder(str).reverse();
-        int reversedNum=Integer.parseInt(reversedStr.toString());
-        return reversedNum;
+    int rev(int num){
+       int rev1 = 0;
+        while(num>0){
+            rev1 = rev1*10 + num%10;
+            num/=10;
+        }
+        return rev1;
     }
 }
