@@ -1,16 +1,12 @@
 class Solution {
-    public int getMax(int[] nums){
-        int maxElement=Integer.MIN_VALUE;
-        for(int k=0;k<nums.length;k++){
-            if(maxElement<nums[k]){
-                maxElement=nums[k];
-            }
-        }
-        return maxElement;
-    }
     public long countSubarrays(int[] nums, int k) {
        int n=nums.length;
-       int max=getMax(nums);
+       int max=Integer.MIN_VALUE;;
+       for(int i=0;i<nums.length;i++){
+            if(max<nums[i]){
+                max=nums[i];
+            }
+        }
        int i=0,j=0;
        int count=0;
        long ans=0;
