@@ -10,7 +10,8 @@ class Solution {
             }
             else{
                 i++;
-            } 
+            }
+            
         }
         return a;
     }
