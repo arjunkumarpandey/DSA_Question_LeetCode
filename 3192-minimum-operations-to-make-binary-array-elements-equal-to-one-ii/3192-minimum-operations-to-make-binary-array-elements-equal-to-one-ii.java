@@ -1,0 +1,17 @@
+class Solution {
+    public int minOperations(int[] nums) {
+        int flips = 0;
+        boolean flipped = false;
+
+        for (int i = 0; i < nums.length; i++) {
+            int currentValue = flipped ? 1 - nums[i] : nums[i];
+            
+            if (currentValue == 0) {
+                flips++;
+                flipped = !flipped;  
+            }
+        }
+
+        return flips;
+    }
+}
